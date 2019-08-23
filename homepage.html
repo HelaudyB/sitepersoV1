@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <title>Élodie Belguet - Graphiste et développeur</title>
+
+    <!--Template based on URL below-->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway300&display=swap" rel="stylesheet">
+
+    <!-- Pour animer en css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+    <!-- Place your stylesheet here-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- mon script js -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/granim.min.js"></script>
+    <!-- là ça marche bien en linkant le github -->
+    <script src="https://sarcadass.github.io/granim.js" rel=""></script>
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="noir">
+        <nav class="navbar navbar-expand-lg  ">
+            <a class="navbar-brand" href="#">Logo à Mettre</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Recherche">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Recherche</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <main role="main" class="container" id="canvas-basic">
+        <div class="col-12 centrer">
+        </div>
+
+        <div class="col-12 ">
+            <h1 class="fadeInLeft"> Élodie Belguet - Graphiste &#38; développeur</h1>
+            <h2>Site en construction</h2>
+            <br>
+            <br>
+            <p> Pour me suivre partout ...</p>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <p><i class="fas fa-envelope-open fa-5x"></i><br><a href="mailto:ebelguet@gmail.com">ebelguet@gmail.com</a></p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <p><i class="fab fa-facebook-square fa-5x"></i><br><a href="https://www.facebook.com/ebelguetgravure"> Élodie Belguet</a></p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <p><i class="fab fa-instagram fa-5x"> </i><br> <a href="https://www.instagram.com/elodiebelguet/">elodiebelguet</a></p>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <p> Enfin pas trop quand même !</p>
+
+        </div>
+        <footer>
+            <div>
+                <p class="copyright">
+                    Non ce n'est pas du WordPress, c'est à l'ancienne...</p>
+            </div>
+        </footer>
+        <!--   <canvas id="canvas-basic"></canvas> -->
+
+        <!-- <object>
+            <embed src="images/test.svg">
+        </object>-->
+
+
+    </main><!-- /.container -->
+    <script>
+        var granimInstance = new Granim({
+            element: '#canvas-basic',
+            direction: 'diagonal',
+            isPausedWhenNotInView: true,
+            states: {
+                "default-state": {
+                    gradients: [
+                        ['#ff9966', '#ff5e62'],
+                        ['#00F260', '#0575E6'],
+                        ['#e1eec3', '#f05053']
+                    ]
+                }
+            }
+        });
+    </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.3"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+
+</body>
+
+</html>
