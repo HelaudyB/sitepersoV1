@@ -13,7 +13,6 @@ var granimInstance = new Granim({
         }
     }
 });
-/* rendre sticky la navbar (on verra ça plus tard*/
 
 
 /* ----------- */
@@ -97,15 +96,20 @@ $(document).ready(function(){
   
 });
 
-    // Scrollspy fluide
-      $(function () {
-        $('header a').on('click', function(e) {
-          e.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(this.hash).offset().top
-          }, 1000, function(){
-            window.location.hash = hash;
-          });
-        });
-      });
+// pour un bouton "back to top" 
+// When the user scrolls down 20px from the top of the document, show the button (version qui ne s'efface pas)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 1000) {
+    document.getElementById("backtotop").style.display = "block";
+  } else {
+    document.getElementById("backtotop").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

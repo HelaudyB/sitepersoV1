@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -34,10 +34,20 @@
     <!-- font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" crossorigin="anonymous">
 
+    <!-- juste pour tester -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+    <!-- juste pour tester -->
+    <!-- les icones matérial design -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body class="dark">
-    <!-- ici on peut que le mode par défaut est dark-->
+<body class="dark" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!-- ici on peut voir que le mode par défaut est dark-->
+    <button onclick="topFunction()" id="backtotop" title="Go to top"><i class="material-icons">
+            keyboard_arrow_up
+        </i></button>
 
     <header>
         <progress value="0" id="progressBar">
@@ -45,68 +55,84 @@
                 <span class="progress-bar"></span>
             </div>
         </progress>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top nav">
             <a class="navbar-brand" href="#">Élodie Belguet</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler p-0 shadow-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons" id="burgermenu">
+                    menu
+                </i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#accueil">Accueil <span class="sr-only"></span></a>
+                <ul class="navbar-nav mr-auto" id="navbar">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#accueil">Accueil <span class="sr-only">(current)</span> </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#apropos">À propos</a>
+                        <a class="nav-link" href="#apropos">À propos </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#boutsdecode">Bouts de code</a>
+                        <a class="nav-link" href="#boutsdecode">Bouts de code </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#crea">Créations </a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifs">Diplômes et certifications </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact </a>
                     </li>
 
                 </ul>
-                <form class="form-inline my-2 my-lg-0 switchmd">
-                    <input type="checkbox" id="switch1" class="switchmd__input" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light" checked>
-                    <label for="switch1" class="switchmd__label"> <i class="far fa-lightbulb fa-2x"></i></label>
+
+            </div>
+            <div class="d-block d-flex align-items-center py-2"><i class="fas fa-sun"></i>
+                <div class="switchmd"> <input type="checkbox" id="switch1" class="switchmd__input" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light" checked> <label for="switch1" class="switchmd__label"> </label></div>
+                <i class="fas fa-moon"></i>
             </div>
         </nav>
     </header>
 
 
-    <main role="main" class="container" id="canvas-basic">
-        <div id="accueil">
-        
-        <div class="col-12 ">
-            <h1 class="animated pulse "> Graphiste &#38; développeur</h1>
-            <h2>Site en construction</h2>
-            <br>
-            <br>
-            <p class="follow"> Pour me suivre partout ...</p>
+    <main role="main" class="" id="">
 
-        </div>
-        <div class="container">
-            <div class="row lienrs">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <p><i class="fas fa-envelope-open fa-5x"></i><br><a class="hover" href="mailto:ebelguet@gmail.com">ebelguet@gmail.com</a></p>
+        <div id="accueil">
+
+            <div class="col-12 ">
+                <h1 class="animated pulse "> Graphiste &#38; développeur</h1>
+                <h2>Site en construction</h2>
+                <br>
+                <br>
+                <p class="follow"> Pour me suivre partout ...</p>
+
+            </div>
+            <div class="container">
+                <div class="row lienrs">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <p><i class="fas fa-envelope-open fa-5x"></i><br><a class="hover" href="mailto:ebelguet@gmail.com">ebelguet@gmail.com</a></p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <p><i class="fab fa-facebook-square fa-5x"></i><br><a class="hover" href="https://www.facebook.com/ebelguetgravure"> Élodie Belguet</a></p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <p><i class="fab fa-instagram fa-5x"> </i><br> <a class="hover" href="https://www.instagram.com/elodiebelguet/">elodiebelguet</a></p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <p><i class="fab fa-linkedin fa-5x"></i><br> <a class="hover" href="https://www.linkedin.com/in/elodie-belguet-23b369146/">LinkedIn</a></p>
+                    </div>
+
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <p><i class="fab fa-facebook-square fa-5x"></i><br><a class="hover" href="https://www.facebook.com/ebelguetgravure"> Élodie Belguet</a></p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <p><i class="fab fa-instagram fa-5x"> </i><br> <a class="hover" href="https://www.instagram.com/elodiebelguet/">elodiebelguet</a></p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <p><i class="fab fa-linkedin fa-5x"></i><br> <a class="hover" href="https://www.linkedin.com/in/elodie-belguet-23b369146/">LinkedIn</a></p>
-                </div>
+            </div>
+            <div class="col-12">
+                <p class="follow"> Enfin pas trop quand même !</p>
 
             </div>
         </div>
-        <div class="col-12">
-            <p class="follow"> Enfin pas trop quand même !</p>
 
-        </div></div>
-
-        <div class="container" id="apropos">
+        <div class="container-fluid clair" id="apropos">
             <h2> à propos</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere lorem sed elementum vestibulum. Sed semper et mauris a convallis. Aenean ultricies ipsum lectus. Sed sed faucibus elit, non dignissim leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in commodo arcu, vel sagittis ante. Vivamus efficitur elementum dui. Sed a eleifend nibh. Etiam ut est viverra, fermentum lectus a, dignissim diam. Duis mollis elit ut blandit convallis. Proin quis magna est. Nulla facilisi.<br><br>
 
@@ -121,16 +147,16 @@
         <div class="container px-5" id="boutsdecode">
             <h2>Bouts de code</h2>
             <div class="col-12">
-                            <h3>Hover zigzag</h3>
+                <h3>Hover zigzag</h3>
                 <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="css,result" data-user="Elodie_Belguet" data-slug-hash="yLBgGoG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="yLBgGoG">
-  <span>See the Pen <a href="https://codepen.io/Elodie_Belguet/pen/yLBgGoG/">
-  yLBgGoG</a> by Elodie  (<a href="https://codepen.io/Elodie_Belguet">@Elodie_Belguet</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <span>See the Pen <a href="https://codepen.io/Elodie_Belguet/pen/yLBgGoG/">
+                            yLBgGoG</a> by Elodie (<a href="https://codepen.io/Elodie_Belguet">@Elodie_Belguet</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
             </div>
-            
+
             <h3>Hover animé</h3>
             <h3>Hover avec dégradé</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere lorem sed elementum vestibulum. Sed semper et mauris a convallis. Aenean ultricies ipsum lectus. Sed sed faucibus elit, non dignissim leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in commodo arcu, vel sagittis ante. Vivamus efficitur elementum dui. Sed a eleifend nibh. Etiam ut est viverra, fermentum lectus a, dignissim diam. Duis mollis elit ut blandit convallis. Proin quis magna est. Nulla facilisi.<br><br>
@@ -142,6 +168,59 @@
                 Praesent dignissim posuere dignissim. Nulla vehicula eleifend sem, in pellentesque lorem ultrices ut. Vivamus elementum mauris at eros cursus luctus non nec odio. Cras eget quam blandit, dapibus dui non, luctus velit. Etiam egestas vulputate purus at placerat. Proin vehicula enim eget imperdiet aliquam. Cras tempus fringilla dolor ac viverra. Nullam consectetur nisi quam. Aliquam erat volutpat. Quisque vel justo non diam rhoncus finibus ut at arcu. Aenean laoreet, dolor et tincidunt porttitor, orci ligula dapibus ligula, vitae vehicula magna leo in erat. Integer consequat scelerisque urna, a tincidunt tortor laoreet ac. Nulla fermentum blandit enim. Quisque lacinia mauris ac ipsum elementum viverra. Nunc in commodo ante. Nullam tempor nulla eget mattis iaculis.<br><br>
 
                 Praesent mollis leo et finibus vehicula. Aliquam sodales pharetra dui, nec blandit nisi dictum sit amet. Ut consequat, felis quis aliquet rutrum, sapien neque ullamcorper velit, in euismod nulla turpis at quam. Fusce ante orci, placerat et molestie non, blandit aliquam tellus. Maecenas tincidunt metus non sollicitudin imperdiet. Suspendisse pulvinar feugiat dui. Donec vel arcu id risus porttitor facilisis.</p>
+            <h3>Empêcher la sélection d'un texte </h3>
+            <p class="disable-selection"> .disable-selection {
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer */
+                -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+                -webkit-user-select: none; /* Chrome, Safari, and Opera */
+                -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+                }</p>
+        </div>
+        <div class="container-fluid clair" id="crea">
+            <h2> Créations</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere lorem sed elementum vestibulum. Sed semper et mauris a convallis. Aenean ultricies ipsum lectus. Sed sed faucibus elit, non dignissim leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in commodo arcu, vel sagittis ante. Vivamus efficitur elementum dui. Sed a eleifend nibh. Etiam ut est viverra, fermentum lectus a, dignissim diam. Duis mollis elit ut blandit convallis. Proin quis magna est. Nulla facilisi.<br><br>
+
+                Etiam volutpat rhoncus ante, sed tristique nisl venenatis id. Aliquam consectetur imperdiet erat id molestie. Maecenas porttitor tincidunt neque, non auctor ipsum. Mauris et gravida ante. Sed venenatis rhoncus nibh in dapibus. Nullam convallis orci sapien, id tempor nulla ornare quis. Nullam tellus enim, auctor sit amet arcu quis, vehicula pretium quam. Sed accumsan placerat lectus non porta. Etiam dictum lacus quis odio lacinia, a rutrum sem commodo. Suspendisse ullamcorper lobortis orci, a pulvinar neque finibus ut. Phasellus rutrum, magna porttitor feugiat commodo, ante lacus feugiat tortor, in dignissim neque nisl at massa. Nulla facilisi. Aenean facilisis elit quis tortor pretium consequat. Nullam malesuada gravida rhoncus. Phasellus ut dui sed urna interdum varius ac vitae ex. Sed mi arcu, scelerisque a est eget, dignissim ullamcorper elit.</p>
+        </div>
+        <div class="container" id="certifs">
+            <h2>Diplômes et certifications </h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere lorem sed elementum vestibulum. Sed semper et mauris a convallis. Aenean ultricies ipsum lectus. Sed sed faucibus elit, non dignissim leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in commodo arcu, vel sagittis ante. Vivamus efficitur elementum dui. Sed a eleifend nibh. Etiam ut est viverra, fermentum lectus a, dignissim diam. Duis mollis elit ut blandit convallis. Proin quis magna est. Nulla facilisi.<br><br>
+
+                Etiam volutpat rhoncus ante, sed tristique nisl venenatis id. Aliquam consectetur imperdiet erat id molestie. Maecenas porttitor tincidunt neque, non auctor ipsum. Mauris et gravida ante. Sed venenatis rhoncus nibh in dapibus. Nullam convallis orci sapien, id tempor nulla ornare quis. Nullam tellus enim, auctor sit amet arcu quis, vehicula pretium quam. Sed accumsan placerat lectus non porta. Etiam dictum lacus quis odio lacinia, a rutrum sem commodo. Suspendisse ullamcorper lobortis orci, a pulvinar neque finibus ut. Phasellus rutrum, magna porttitor feugiat commodo, ante lacus feugiat tortor, in dignissim neque nisl at massa. Nulla facilisi. Aenean facilisis elit quis tortor pretium consequat. Nullam malesuada gravida rhoncus. Phasellus ut dui sed urna interdum varius ac vitae ex. Sed mi arcu, scelerisque a est eget, dignissim ullamcorper elit.</p>
+        </div>
+        <div class="container-fluid clair" id="contact">
+            
+                <h2>Contact </h2>
+           <h3>Rajouter un scrollspy plusfluide</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere lorem sed elementum vestibulum. Sed semper et mauris a convallis. Aenean ultricies ipsum lectus. Sed sed faucibus elit, non dignissim leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in commodo arcu, vel sagittis ante. Vivamus efficitur elementum dui. Sed a eleifend nibh. Etiam ut est viverra, fermentum lectus a, dignissim diam. Duis mollis elit ut blandit convallis. Proin quis magna est. Nulla facilisi.<br><br>
+
+                Etiam volutpat rhoncus ante, sed tristique nisl venenatis id. Aliquam consectetur imperdiet erat id molestie. Maecenas porttitor tincidunt neque, non auctor ipsum. Mauris et gravida ante. Sed venenatis rhoncus nibh in dapibus. Nullam convallis orci sapien, id tempor nulla ornare quis. Nullam tellus enim, auctor sit amet arcu quis, vehicula pretium quam. Sed accumsan placerat lectus non porta. Etiam dictum lacus quis odio lacinia, a rutrum sem commodo. Suspendisse ullamcorper lobortis orci, a pulvinar neque finibus ut. Phasellus rutrum, magna porttitor feugiat commodo, ante lacus feugiat tortor, in dignissim neque nisl at massa. Nulla facilisi. Aenean facilisis elit quis tortor pretium consequat. Nullam malesuada gravida rhoncus. Phasellus ut dui sed urna interdum varius ac vitae ex. Sed mi arcu, scelerisque a est eget, dignissim ullamcorper elit.</p>
+                      <div class="card near-moon-gradient form-white">
+                        <div class="card-body">
+                            <!-- Form subscription -->
+                            <form class="px-10 mx-auto" style="width: 300px;">
+                                <h3 class="text-center indigo-text font-bold py-4"><strong>Subscribe</strong></h3>
+                                <div class="md-form">
+                                    <i class="fa fa-user prefix white-text"></i>
+                                    <input type="text" id="form35" class="form-control">
+                                    <label for="form35">Your name</label>
+                                </div>
+                                <div class="md-form">
+                                    <i class="fa fa-envelope prefix white-text"></i>
+                                    <input type="text" id="form25" class="form-control">
+                                    <label for="form25">Your email</label>
+                                </div>
+                                <div class="text-center py-4">
+                                    <button class="btn btn-indigo">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+                                </div>
+                            </form>
+                            <!-- Form subscription -->
+                        </div>
+                    </div>
         </div>
 
     </main><!-- /.container -->

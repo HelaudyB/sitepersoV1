@@ -11,30 +11,44 @@
     left: 0;
     z-index: 0;
 }*/
-
+/* dégradé du formulaire*/
+.near-moon-gradient {
+    background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+}
+main{
+   margin-top: 56px;
+}
 /* css principal*/
 body.dark .navbar {
 
-    color: black;
-    background-color: white;
-}
- .navbar {
-
-    color: white;
-    background-color: black;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #f0ebeb;
 }
 
-body.dark navbar a {
-
-    color: black;
+.navbar {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(130, 130, 130, 1);
 }
+/*l'ombre casse-couille qui voulait pas partir, c'était juste de l'outline*/
+.navbar-toggler{
+    outline: none !important;
+}
+.clair{
+   background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark .clair{
+   background-color: rgba(255, 255, 255, 0.3) ;
+}
+/* quand on sélectionne*/
 ::selection {
     background: #ff8a00;
-    color: white;
+    color: #f0ebeb;
 }
+
 body.dark ::selection {
     background: #30bf86;
-    color: white;
+    color: #f0ebeb;
 }
 
 
@@ -43,31 +57,48 @@ noir {
 
 }
 
-main {
+/* pour empêcher la sélection*/
+.disable-selection {
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer */
+    -khtml-user-select: none;
+    /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none;
+    /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none;
+    /* Disable Android and iOS callouts*/
 }
 
+
+
 body.dark {
-    color: white;
+    color: #f0ebeb;
     background-color: black;
     background-image: none;
 
 }
 
 body {
-      width: 100%;
+    width: 100%;
     padding: 0px;
     margin: 0px;
     z-index: 10;
     color: black;
+    position: relative;
 
 }
-.fa-lightbulb{
+
+.fa-lightbulb {
     color: black;
     display: inline-block;
     padding-left: 20px;
 }
-body.dark .fa-lightbulb{
-    color: white;
+
+.fas {
+    color: #f0ebeb;
+    vertical align: middle;
 }
 
 /* animation du h1*/
@@ -76,11 +107,17 @@ body.dark .fa-lightbulb{
     animation-delay: 2s;
     animation-iteration-count: 1;
 }
+
 body.dark footer {
     color: black;
     background-color: #30bf86;
 
 }
+
+.fixed-top {
+    z-index: 200;
+}
+
 footer {
     width: 100%;
     padding: 0px;
@@ -92,22 +129,22 @@ footer {
 }
 
 footer,
-p,
-a {
+p {
     font-size: 15px;
 
 }
 
-body.dark .copyright  {
-    color: white;
+body.dark .copyright {
+    color: #f0ebeb;
 
 }
+
 .copyright {
     color: black;
 
 }
 
-.lienrs  {
+.lienrs {
     font-size: 30px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -116,65 +153,70 @@ body.dark .copyright  {
     font-style: italic;
 
 }
-body.dark .lienrs  {
-        color: darkgray;
+
+body.dark .lienrs {
+    color: darkgray;
 
 }
 
-body.dark h1  {
+body.dark h1 {
     color: #30bf86;
 
 
 }
-h1{
-        font-size: 50px;
+
+h1 {
+    font-size: 50px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
-        color: orangered;
+    color: orangered;
     font-weight: 300;
     animation: hue 60s infinite linear;
 }
 
 /* icone font awesome */
-body.dark i{
+body.dark .fa-5x , body.dark .fa-moon , body.dark .fa-sun{
     background: linear-gradient(to right, #30bf86, #075870);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-i {
-        background: linear-gradient(to right, #ff8a00, #da1b60);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+
+.fa-5x ,.fa-moon, .fa-sun{
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 body.dark .hover {
 
     color: aliceblue;
 
 }
-.hover{
-        font-size: 30px;
+
+.hover {
+    font-size: 30px;
     text-align: center;
     color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
-body.dark .hover:hover  {
+body.dark .hover:hover {
     background: linear-gradient(to right, #30bf86, #075870);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
+
 .hover:hover {
-        background: linear-gradient(to right, #ff8a00, #da1b60);
+    background: linear-gradient(to right, #ff8a00, #da1b60);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
 
 h2 {
-    font-size: 100px;
+    font-size: 50px;
     text-align: center;
     color: black;
     font-family: 'Lato', sans-serif;
@@ -183,8 +225,7 @@ h2 {
 }
 
 body.dark h2 {
-    color: white;
-
+    color: #f0ebeb;
 }
 
 body.dark h2:hover {
@@ -193,7 +234,8 @@ body.dark h2:hover {
     -webkit-text-fill-color: transparent;
 
 }
-h2:hover  {
+
+h2:hover {
     background: linear-gradient(to right, #ff8a00, #da1b60);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -207,40 +249,7 @@ object {
 
 }
 
-/* animation svg */
-.st0 {
-    fill: none;
-    stroke: #F2F2F2;
-    stroke-width: 4;
-    stroke-miterlimit: 10;
-}
 
-.icon .st0 {
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    transition: .5s;
-}
-
-.icon .fill {
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    transition: .5s;
-    fill: #ffffff;
-}
-
-.icon:hover {
-    cursor: pointer;
-}
-
-.icon:hover .st0 {
-    stroke: #1f8a4c;
-}
-
-.icon:hover .fill {
-    -webkit-transform: scale(893, 893);
-    -moz-transform: scale(893, 893);
-    transform: scale(893, 893);
-}
 
 .titre {
     top: 100px;
@@ -271,93 +280,93 @@ object {
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb  {
-    background:linear-gradient(to right, #ff8a00, #da1b60);
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #ff8a00, #da1b60);
     border-radius: 15px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover  {
+::-webkit-scrollbar-thumb:hover {
     background: #075870;
 }
 
 /* barre de progression */
-
-
 progress {
-  /* Positioning */
-  position: fixed;
-  left: 0;
-  top: 0;
-z-index: 1000;
+    /* Positioning */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
 
-  /* Dimensions */
-  width: 100%;
-  height: .25em;
+    /* Dimensions */
+    width: 100%;
+    height: .4em;
 
-  /* Reset the apperance */  
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+    /* Reset the apperance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
-  /* Get rid of the default border in Firefox/Opera. */
-  border: none;
+    /* Get rid of the default border in Firefox/Opera. */
+    border: none;
 
-  /* For Firefox/IE10+ */
-  background-color: transparent;
+    /* For Firefox/IE10+ */
+    background-color: transparent;
 
-  /* For IE10+, color of the progress bar */
-  color: red;
+    /* For IE10+, color of the progress bar */
+    color: #ff8a00;
 }
-body.dark progress{
-      color: #30bf86;
+body.dark progress {
+    color: #075870;
 
-    
+
 }
 
 progress::-webkit-progress-bar {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 
 
 .single::-webkit-progress-value {
-  background-color: transparent;
-  background-image: -webkit-linear-gradient(left, transparent, red);
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(left, transparent, #ff8a00);
 }
 
 .single::-moz-progress-bar {
-  background-color: transparent;
-  background-image: -moz-linear-gradient(left, transparent, red);
+    background-color: transparent;
+    background-image: -moz-linear-gradient(left, transparent, #ff8a00);
 }
+
 body.dark .single::-webkit-progress-value {
-  background-color: transparent;
-  background-image: -webkit-linear-gradient(left, transparent, #30bf86);
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(left, transparent, #075870);
 }
 
 body.dark .single::-moz-progress-bar {
-  background-color: transparent;
-  background-image: -moz-linear-gradient(left, transparent, #30bf86);
+    background-color: transparent;
+    background-image: -moz-linear-gradient(left, transparent,  #075870);
 }
 
 .progress-container {
-  width: 100%;
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 1em;
-  display: block;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 1em;
+    display: block;
 }
 
 .progress-bar {
-  background-color: red;
-  width: 50%;
-  display: block;
-  height: inherit;
+    background-color: red;
+    width: 50%;
+    display: block;
+    height: inherit;
 }
+
 body.dark .progress-bar {
-  background-color: #30bf86;
+    background-color: #075870;
 }
 
 
@@ -369,19 +378,23 @@ body.dark::-webkit-scrollbar {
 
 /* Track */
 body.dark::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
+    box-shadow: inset 0 0 5px #f0ebeb;
     border-radius: 15px;
 }
 
 /* Handle */
-body.dark::-webkit-scrollbar-thumb  {
+body.dark::-webkit-scrollbar-thumb {
     background: linear-gradient(to left top, #30bf86, #075870);
     border-radius: 15px;
 }
 
 /* Handle on hover */
-body.dark::-webkit-scrollbar-thumb:hover  {
+body.dark::-webkit-scrollbar-thumb:hover {
     background: #075870;
+}
+
+a {
+    color: #f0ebeb;
 }
 
 a:hover {
@@ -390,157 +403,212 @@ a:hover {
     -webkit-text-fill-color: transparent;
 
 }
+
 body.dark a:hover {
     background: linear-gradient(to left top, #30bf86, #075870);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;}
+    -webkit-text-fill-color: transparent;
+}
+
 /* ________ button dark mode*/
-/* Rounded sliders */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-/* fin du button toggle de w3school */
 /*  début de celui en material design*/
-
-
-
-
 .switchmd {
-  display: inline-block;
-  position: relative;
-  font-size: 16px;
-  line-height: 24px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    height: 23px;
+    margin: 0 0 0 7px;
 }
+
 .switchmd__input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 20px;
-  opacity: 0;
-  z-index: 0;
+    position: absolute;
+
+    width: 36px;
+    height: 20px;
+    opacity: 0;
+    z-index: 0;
 }
+
 .switchmd__label {
-  display: block;
-  padding: 0 0 0 44px;
-  cursor: pointer;
+    display: block;
+    padding: 0 0 0 44px;
+    cursor: pointer;
 }
+
 .switchmd__label:before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 36px;
-  height: 14px;
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 36px;
+    height: 14px;
     background-color: orangered;
-  border-radius: 14px;
-  z-index: 1;
-  transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 14px;
+    z-index: 1;
+  /*  transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);*/
+        transition: .25s ease-out;
     margin: 0;
-}
-nav{
-    align-items: center;
 }
 
 body.dark .switchmd__label:before {
-        background-color: #075870;
+    background-color: #075870;
 }
+
 .switchmd__label:after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #da1b60;
-  border-radius: 14px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  z-index: 2;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: left, background-color;
-    align-content: center;
-    align-items: center;
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    background-color: #da1b60;
+    border-radius: 14px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    z-index: 2;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: left, background-color;
 }
+
 .switchmd__input:checked + .switchmd__label:before {
-  background-color: orangered;
+    background-color: orangered;
 }
+
 .switchmd__input:checked + .switchmd__label:after {
-  left: 16px;
-  background-color: #da1b60;
+    left: 16px;
+    background-color: #da1b60;
 }
+
 body.dark .switchmd__input:checked + .switchmd__label:before {
-  background-color: #075870;
+    background-color: #075870;
 }
 
 body.dark .switchmd__input:checked + .switchmd__label:after {
-  left: 16px;
-  background-color: #30bf86;
+    left: 16px;
+    background-color: #30bf86;
 }
 
-.follow{
+/* fin du bouton dark Mode*/
+
+.follow {
     font-size: 30px;
     text-align: center;
 }
+
+/* ---liens du menu ----*/
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    opacity: 0.70;
+}
+
+.nav-link .active:active {
+    opacity: 1;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    font-weight: 500;
+}
+
+
+body.dark a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* pour les onglets du menu actifs ça rajoute une barre en bas*/
+
+.active::after,
+.nav-item:hover::after {
+    opacity: 1;
+    content: ' ';
+    position: absolute;
+    border-top: solid 8px transparent;/* si je mets juste "border" les extrémités seront pointus*/
+    border-width: 8px;
+    top: 2.5em;
+    left: 4px;
+    right: 4px;
+    border-color: #ff8a00 transparent transparent transparent;
+}
+a.nav-link.active{
+        color: #ff8a00;
+
+}
+body.dark a.nav-link.active{
+        color: #075870;
+
+}
+.navbar-nav .nav-item .nav-link .active a {
+    opacity: 1;
+}
+
+body.dark .active::after,
+body.dark .nav-item:hover::after {
+    border-color: #075870 transparent transparent transparent;
+
+}
+#burgermenu{
+    color: #ff8a00;
+}
+body.dark #burgermenu{
+    color: #075870;
+}
+/* ___ fin des liens du menu___*/
+
+
+/*_____Bouton back to top _____ */
+
+#backtotop {
+    display:block;
+    height: 56px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ff8a00;
+    color: #f0ebeb;
+    cursor: pointer;
+    padding: 0 3px;
+    border-radius: 29px;
+    /* sert à rien car le bouton ne disparait pas*/
+      transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    
+}
+#backtotop:hover {
+    background-color: #da1b60;
+}
+
+body.dark #backtotop:hover {
+    background-color: #30bf86;
+}
+
+body.dark #backtotop {
+    background-color: #075870;
+}
+.material-icons{
+    font-size: 50px !important;
+    font-weight: 800 !important;
+    color: #f0ebeb;
+}
+
+
+
 @media screen and (min-width: 641px) and (max-width: 950px) {
     h1 {
         font-size: 30px;
     }
-    h2{
-        font-size:  50px;
+
+    h2 {
+        font-size: 50px;
     }
 
     a {
@@ -560,6 +628,7 @@ body.dark .switchmd__input:checked + .switchmd__label:after {
         font-size: 20px;
         margin-top: 20px;
     }
+
     main {
         margin-top: 50px;
         margin-bottom: auto;
@@ -575,6 +644,7 @@ body.dark .switchmd__input:checked + .switchmd__label:after {
         font-weight: 800;
 
     }
+
     a {
         font-size: 25px;
         text-align: center;
@@ -583,34 +653,9 @@ body.dark .switchmd__input:checked + .switchmd__label:after {
 
     h1 {
         font-size: 20px;
-        color: orangered;
     }
 
     p {
         font-size: 20px;
-        color: darkgray;
-    }
-
-    /* modifier l'apparence de la scroll bar */
-    /* width */
-    ::-webkit-scrollbar {
-        width: 15px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px black;
-        border-radius: 10px;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: linear-gradient(to left top, #ff8a00, #da1b60);
-        border-radius: 10px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #ff8a00;
     }
 }
